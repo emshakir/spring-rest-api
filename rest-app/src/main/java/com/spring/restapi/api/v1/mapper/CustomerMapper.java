@@ -1,7 +1,7 @@
 package com.spring.restapi.api.v1.mapper;
 
 import com.spring.restapi.Domain.*;
-import com.spring.restapi.api.v1.model.*;
+import com.spring.restapi.model.*;
 import org.mapstruct.*;
 import org.mapstruct.factory.*;
 

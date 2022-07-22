@@ -1,6 +1,6 @@
 package com.spring.restapi.controllers.v1;
 
-import com.spring.restapi.api.v1.model.*;
+import com.spring.restapi.model.*;
 import com.spring.restapi.services.*;
 import org.springframework.http.*;
 import org.springframework.stereotype.*;
@@ -21,7 +21,9 @@ public class CustomerController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<CustomerListDTO> getAllCustomers() {
-        return new ResponseEntity<>(new CustomerListDTO(customerService.getAllCustomers()), HttpStatus.OK);
+        CustomerListDTO customerListDTO = new CustomerListDTO();
+        customerListDTO.getCustomers().addAll(customerService.getAllCustomers());
+        return new ResponseEntity<>(customerListDTO, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")

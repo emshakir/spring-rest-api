@@ -1,7 +1,7 @@
 package com.spring.restapi.services;
 
 import com.spring.restapi.Domain.*;
-import com.spring.restapi.api.v1.model.*;
+import com.spring.restapi.model.*;
 import com.spring.restapi.repositories.*;
 import org.junit.jupiter.api.*;
 import org.mockito.*;
